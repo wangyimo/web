@@ -1,0 +1,8 @@
+pillow==5.4.1
+requests
+invoke >= 0.20
+rellu >= 0.6
+docutils >= 0.14
+robotframework >= 3.1.1
+robotframework-seleniumlibrary >= 3.3.1
+robotframework-selenium2library

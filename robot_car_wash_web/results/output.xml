@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.5.2 on linux)" generated="20190506 17:22:00.165" rpa="false">
+<suite name="System" id="s1" source="/home/wangyimo/robot_car_wash_web/tests/admin_system/system.robot">
+<test name="Navigation page" id="s1-t1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:00.282">Opening browser 'Chrome' to base url 'https://camera-monitor-deployment-d.parkone.cn/'.</msg>
+<status starttime="20190506 17:22:00.282" status="PASS" endtime="20190506 17:22:03.316"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status starttime="20190506 17:22:03.317" status="PASS" endtime="20190506 17:22:03.424"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status starttime="20190506 17:22:03.425" status="PASS" endtime="20190506 17:22:03.425"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>0min</arg>
+<arg>3sec</arg>
+<arg>Title Should Be</arg>
+<arg>中杆相机部署系统</arg>
+</arguments>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>中杆相机部署系统</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:03.430">Page title is '中杆相机部署系统'.</msg>
+<status starttime="20190506 17:22:03.426" status="PASS" endtime="20190506 17:22:03.430"></status>
+</kw>
+<status starttime="20190506 17:22:03.426" status="PASS" endtime="20190506 17:22:03.430"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:03.430">Typing text 'admin_123' into text field 'id=username'.</msg>
+<status starttime="20190506 17:22:03.430" status="PASS" endtime="20190506 17:22:03.503"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:03.503">Typing text '88888888' into text field 'id=password'.</msg>
+<status starttime="20190506 17:22:03.503" status="PASS" endtime="20190506 17:22:03.571"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>css=.submit</arg>
+</arguments>
+<assign>
+<var>${button}</var>
+</assign>
+<msg level="INFO" timestamp="20190506 17:22:03.571">${button} = css=.submit</msg>
+<status starttime="20190506 17:22:03.571" status="PASS" endtime="20190506 17:22:03.571"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:03.572">Clicking button 'css=.submit'.</msg>
+<status starttime="20190506 17:22:03.572" status="PASS" endtime="20190506 17:22:03.630"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:06.631">Slept 3 seconds</msg>
+<status starttime="20190506 17:22:03.630" status="PASS" endtime="20190506 17:22:06.631"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://camera-monitor-deployment-d.parkone.cn/main/home</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:06.644">Current location is 'https://camera-monitor-deployment-d.parkone.cn/main/home'.</msg>
+<status starttime="20190506 17:22:06.632" status="PASS" endtime="20190506 17:22:06.644"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>css=.menu-container&gt;li:first-child&gt;div&gt;span&gt;span</arg>
+<arg>系统管理</arg>
+<arg>ignore_case=False</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:06.646">Verifying element 'css=.menu-container&gt;li:first-child&gt;div&gt;span&gt;span' contains exact text '系统管理'.</msg>
+<status starttime="20190506 17:22:06.645" status="PASS" endtime="20190506 17:22:06.671"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.menu-container&gt;li:first-child&gt;div&gt;span&gt;span</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:06.671">Clicking element 'css=.menu-container&gt;li:first-child&gt;div&gt;span&gt;span'.</msg>
+<status starttime="20190506 17:22:06.671" status="PASS" endtime="20190506 17:22:06.709"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:09.710">Slept 3 seconds</msg>
+<status starttime="20190506 17:22:06.709" status="PASS" endtime="20190506 17:22:09.710"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.menu-container&gt;li:first-child&gt;ul</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:09.711">Clicking element 'css=.menu-container&gt;li:first-child&gt;ul'.</msg>
+<status starttime="20190506 17:22:09.711" status="PASS" endtime="20190506 17:22:09.758"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:12.758">Slept 3 seconds</msg>
+<status starttime="20190506 17:22:09.758" status="PASS" endtime="20190506 17:22:12.759"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://camera-monitor-deployment-d.parkone.cn/main/system-management/user-management</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:12.770">Current location is 'https://camera-monitor-deployment-d.parkone.cn/main/system-management/user-management'.</msg>
+<status starttime="20190506 17:22:12.759" status="PASS" endtime="20190506 17:22:12.770"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status starttime="20190506 17:22:12.771" status="PASS" endtime="20190506 17:22:12.803"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>css=.menu-container&gt;li:nth-child(2)&gt;div&gt;span&gt;span</arg>
+<arg>项目信息管理</arg>
+<arg>ignore_case=False</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:12.804">Verifying element 'css=.menu-container&gt;li:nth-child(2)&gt;div&gt;span&gt;span' contains exact text '项目信息管理'.</msg>
+<status starttime="20190506 17:22:12.804" status="PASS" endtime="20190506 17:22:12.826"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:15.827">Slept 3 seconds</msg>
+<status starttime="20190506 17:22:12.827" status="PASS" endtime="20190506 17:22:15.827"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.menu-container&gt;li:nth-child(2)&gt;div&gt;span&gt;span</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:15.829">Clicking element 'css=.menu-container&gt;li:nth-child(2)&gt;div&gt;span&gt;span'.</msg>
+<status starttime="20190506 17:22:15.828" status="PASS" endtime="20190506 17:22:15.874"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.menu-container&gt;li:nth-child(2)&gt;ul</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:15.875">Clicking element 'css=.menu-container&gt;li:nth-child(2)&gt;ul'.</msg>
+<status starttime="20190506 17:22:15.875" status="PASS" endtime="20190506 17:22:15.925"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:18.926">Slept 3 seconds</msg>
+<status starttime="20190506 17:22:15.925" status="PASS" endtime="20190506 17:22:18.926"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://camera-monitor-deployment-d.parkone.cn/main/project-management/project-list</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:18.937">Current location is 'https://camera-monitor-deployment-d.parkone.cn/main/project-management/project-list'.</msg>
+<status starttime="20190506 17:22:18.927" status="PASS" endtime="20190506 17:22:18.938"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status starttime="20190506 17:22:18.938" status="PASS" endtime="20190506 17:22:18.996"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>css=.main-header-layout&gt;div:nth-child(2)&gt;div:nth-child(2)</arg>
+<arg>admin_123</arg>
+<arg>ignore_case=False</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:18.996">Verifying element 'css=.main-header-layout&gt;div:nth-child(2)&gt;div:nth-child(2)' contains exact text 'admin_123'.</msg>
+<status starttime="20190506 17:22:18.996" status="PASS" endtime="20190506 17:22:19.024"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.main-header-layout&gt;div:nth-child(2)&gt;div:nth-child(4)</arg>
+</arguments>
+<msg level="INFO" timestamp="20190506 17:22:19.025">Clicking element 'css=.main-header-layout&gt;div:nth-child(2)&gt;div:nth-child(4)'.</msg>
+<status starttime="20190506 17:22:19.024" status="PASS" endtime="20190506 17:22:19.100"></status>
+</kw>
+<kw name="Choose Ok On Next Confirmation" library="Selenium2Library">
+<doc>*DEPRECATED in Selenium2Library 3.2.* Use `Handle Alert` directly instead.</doc>
+<msg level="WARN" timestamp="20190506 17:22:19.100">Keyword 'Selenium2Library.Choose Ok On Next Confirmation' is deprecated. Use `Handle Alert` directly instead.</msg>
+<status starttime="20190506 17:22:19.100" status="PASS" endtime="20190506 17:22:19.101"></status>
+</kw>
+<status starttime="20190506 17:22:00.281" status="PASS" critical="yes" endtime="20190506 17:22:19.101"></status>
+</test>
+<status starttime="20190506 17:22:00.165" status="PASS" endtime="20190506 17:22:19.102"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" name="System" fail="0" id="s1">System</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="WARN" timestamp="20190506 17:22:19.100">Keyword 'Selenium2Library.Choose Ok On Next Confirmation' is deprecated. Use `Handle Alert` directly instead.</msg>
+</errors>
+</robot>
